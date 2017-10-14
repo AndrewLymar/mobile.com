@@ -1,0 +1,236 @@
+@import "vars";
+@import "normalize";
+@import "fonts";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    min-width: 320px;
+    line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-left {
+    justify-content: flex-start;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-right {
+    justify-content: flex-end;
+}
+
+.flex-around {
+    justify-content: space-around;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.flex-top {
+    align-items: flex-start;
+}
+
+.flex-middle {
+    align-items: center;
+}
+
+.flex-baseline {
+    align-items: baseline;
+}
+
+.flex-bottom {
+    align-items: flex-end
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    background: url(../img/header-bg.png) no-repeat;
+    background-size: cover;
+}
+
+nav {
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding-left: 38px;
+    padding-right: 38px;
+    background-color: #fff;
+    a {
+        margin-right: auto;
+    }
+    .logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        color: #1ab798;
+    }
+    ul {
+        padding: 0;
+        li {
+            margin-right: 40px;
+            list-style: none;
+            text-transform: uppercase;
+            &:last-child {
+                margin-right: 0px;
+            }
+            a {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 13px;
+                font-weight: 700;
+                color: #969596;
+                &:hover {
+                    cursor: pointer;
+                    color: #333;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    padding-left: 40px;
+    padding-right: 120px;
+}
+
+.banner-text {
+    padding-top: 170px;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    line-height: 2.2em;
+    h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+    }
+    h3 {
+        font-weight: 600;
+    }
+    ul {
+        list-style-image: url(../img/arrow-right.png);
+        padding: 15px;
+        li {
+            padding-left: 15px;
+        }
+    }
+    .btn-download {
+        width: 212px;
+        margin-left: 15px;
+        border-radius: 5px;
+        background: url(../img/download.png) #17d0ac no-repeat 25px 50%;
+        padding: 15px 40px 15px 80px;
+        font-size: 22px;
+        font-weight: 600;
+        color: #fff;
+    }
+}
+
+.banner-img {
+    position: relative;
+    top: 115px;
+}
+
+.s-features {
+    padding-bottom: 100px;
+    h2 {
+        margin-top: 120px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #1ab798;
+    }
+    h2:after {
+        width: 60px;
+        height: 10px;
+        border: 1px solid #BABDC1;
+    }
+    >p {
+        width: 70%;
+        margin-top: 70px;
+        margin-bottom: 90px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        color: #282528;
+    }
+    .features-container {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+    .features {
+        margin-top: 65px;
+    }
+    .features-img {
+        width: 311px;
+    }
+    .feature {
+        width: 325px;
+        img {
+            margin-right: 50px;
+        }
+    }
+}
+
+.s-video {
+    background-color: #31D4E7;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    h2 {
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        color: #222;
+    }
+    p {
+        font-family: 'Open Sans', sans-serif;
+        color: #fff;
+    }
+    .os {
+        img {
+            width: 68px;
+            height: 68px;
+            margin-right: 20px;
+        }
+    }
+    .video-text {
+        width: 545px;
+    }
+  
+}
+
+@import "media";
