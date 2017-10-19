@@ -246,7 +246,7 @@ nav {
             transition: background .5s ease;
             border-radius: 50%;
             &:hover {
-                background: #222; 
+                background: #222;
             }
         }
     }
@@ -264,7 +264,7 @@ nav {
         margin-top: 75px;
         margin-bottom: 119px;
         font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
         text-align: center;
         color: #282528;
@@ -272,32 +272,69 @@ nav {
     .employees {
         width: 100%;
         font-family: 'Open Sans', sans-serif;
-        h4 {
+        .employee-name {
             margin-top: 20px;
             font-size: 18px;
             font-weight: 600;
         }
-        p {
+        .employee-position {
             margin-top: 0px;
             font-size: 13px;
             color: #979ca1;
         }
     }
-    .employee1 {
-        background: url(../img/employee1.jpg) no-repeat;
-    }
-    .employee2 {
-        background: url(../img/employee2.jpg) no-repeat;
-    }
-    .employee3 {
-        background: url(../img/employee3.jpg) no-repeat;
-    }
-    .employee4 {
-        background: url(../img/employee4.jpg) no-repeat;
-    }
-    .employee-info {
-        width: 270px;
-        height: 300px;
+    .employee {
+        img {
+            width: 270px;
+            height: 300px;
+        }
+        .hover-block {
+            opacity: 0;
+            width: 270px;
+            height: 300px;
+            position: absolute;
+            transition: opacity 1s ease;
+            padding-top: 25px;
+            padding-right: 25px;
+            padding-left: 25px;
+            background: rgba(50, 191, 163, .85);
+            text-align: center;
+            color: #fff;
+            z-index: 10;
+            h4 {
+                margin-top: 0px;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 24px;
+            }
+            p {
+                margin-top: 15px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        &:hover {
+            .hover-block {
+                opacity: 1;
+            }
+            .employee-name {
+                color: #1ab798;
+            }
+        }
+        .socials {
+            width: 135px;
+            margin-top: 35px;
+        }
+        .social {
+            height: 45px;
+            width: 45px;
+            margin-right: 5px;
+            background: rgba(25, 124, 105, .7);
+            i {
+                font-size: 22px;
+                color: #fff;
+            }
+        }
     }
 }
 
