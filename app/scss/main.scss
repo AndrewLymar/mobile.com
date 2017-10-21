@@ -284,15 +284,17 @@ nav {
         }
     }
     .employee {
+        position: relative;
         img {
             width: 270px;
             height: 300px;
         }
         .hover-block {
-            opacity: 0;
             width: 270px;
             height: 300px;
             position: absolute;
+            top: 0;
+            left: 0;
             transition: opacity 1s ease;
             padding-top: 25px;
             padding-right: 25px;
@@ -300,6 +302,7 @@ nav {
             background: rgba(50, 191, 163, .85);
             text-align: center;
             color: #fff;
+            opacity: 0;
             z-index: 10;
             h4 {
                 margin-top: 0px;
@@ -342,13 +345,14 @@ nav {
     .customer {
         font-family: 'Open Sans', sans-serif;
         font-weight: 600;
-        img {
-            margin-top: 35px;
+        .customer-photo {
             width: 100px;
             height: 100px;
+            margin-top: 35px;
+            margin-bottom: 30px;
+            background: url("../img/customer.jpg") no-repeat 50%;
             border: 1px solid #c8cbcb;
             border-radius: 50%;
-            margin-bottom: 30px;
         }
         h3 {
             font-size: 16px;
@@ -387,6 +391,110 @@ nav {
                 }
             }
         }
+    }
+}
+
+footer {
+    background: url("../img/footer-bg.png") no-repeat;
+    background-size: cover;
+    .section-title {
+        margin-top: 70px;
+        margin-bottom: 100px;
+        h2 {
+            color: #fff;
+        }
+    }
+    .footer-info {
+        font-family: 'Open Sans', sans-serif;
+        h5 {
+            font-size: 24px;
+            font-weight: 400;
+            color: #fff;
+        }
+        p {
+            font-size: 14px;
+            line-height: 21px;
+            color: #a8a8a8;
+        }
+        .footer-socials {
+            .social {
+                width: 42px;
+                height: 42px;
+                margin-right: 15px;
+                border-radius: 50%;
+                font-size: 20px;
+                color: #fff;
+                
+                &-facebook {
+                    background: #3B5997;
+                }
+                &-twitter {
+                    background: #3EC2F3;
+                }
+                &-google-plus {
+                    background: #E44C42;
+                }
+                &:hover {
+                    background: #fff;
+                    color: #222;    
+                }
+            }
+            i {
+                transition: background .5s ease;
+            }
+        }
+        .contacts {
+            margin-top: 30px;
+            p {
+                margin: 0;
+                color: #bface2;
+            }
+            .email {
+                font-size: 14px;
+            }
+        }
+    }
+    form {
+        width: 570px;
+        input {
+            width: 270px;
+            height: 42px;
+        }
+        input,
+        textarea {
+            border-radius: 5px;
+            background-color: #fff;
+            border: none;
+            padding-left: 15px;
+        }
+        textarea {
+            height: 180px;
+            width: 575px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding-top: 10px;
+        }
+        button {
+            width: 160px;
+            height: 52px;
+            padding: 13px 40px;
+            align-self: flex-end;
+            background: #31d4e7;
+            border: 0;
+            border-radius: 5px;
+            font-size: 22px;
+            color: #fff;
+        }
+    }
+    .copyrigth {
+        width: 100%;
+        height: 76px;
+        margin-top: 55px;
+        align-self: flex-start;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: #ababab;
+        border-top: 1px solid #6B6B6B;
     }
 }
 
