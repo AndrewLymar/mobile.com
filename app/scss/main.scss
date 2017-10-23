@@ -76,7 +76,7 @@ a {
 }
 
 .container {
-    max-width: 1240px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -152,7 +152,7 @@ nav {
 
 .banner {
     padding-left: 40px;
-    padding-right: 120px;
+    padding-right: 80px;
 }
 
 .banner-text {
@@ -184,6 +184,9 @@ nav {
         font-size: 22px;
         font-weight: 600;
         color: #fff;
+        &:hover {
+            background: url(../img/download.png) #1BB798 no-repeat 25px 50%;
+        }
     }
 }
 
@@ -424,7 +427,8 @@ footer {
                 border-radius: 50%;
                 font-size: 20px;
                 color: #fff;
-                
+                transition: background 1s ease;
+                transition: color 1s ease;
                 &-facebook {
                     background: #3B5997;
                 }
@@ -436,11 +440,8 @@ footer {
                 }
                 &:hover {
                     background: #fff;
-                    color: #222;    
+                    color: #222;
                 }
-            }
-            i {
-                transition: background .5s ease;
             }
         }
         .contacts {
@@ -484,17 +485,27 @@ footer {
             border-radius: 5px;
             font-size: 22px;
             color: #fff;
+            cursor: pointer;
+            &:hover {
+                background-color: #17D0AC;      
+            }
         }
     }
     .copyrigth {
         width: 100%;
         height: 76px;
         margin-top: 55px;
-        align-self: flex-start;
+        padding-left: 15px;
+        padding-right: 15px;
         font-family: 'Open Sans', sans-serif;
         font-size: 14px;
         color: #ababab;
         border-top: 1px solid #6B6B6B;
+        .container-footer {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
     }
 }
 
