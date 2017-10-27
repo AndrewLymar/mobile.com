@@ -8,21 +8,23 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <div class="container flex-col">
             <nav class="flex-row flex-around flex-middle">
                 <a href="">
                     <h1 class="logo">Mobileapp</h1>
                 </a>
+                <img src="img/menu-icon.png" class="mobile-menu-icon" alt="">
                 <ul class="flex-row">
-                    <li><a>Home</a></li>
-                    <li><a>Features</a></li>
-                    <li><a>Team</a></li>
-                    <li><a>Testimonials</a></li>
-                    <li><a>Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="banner flex-row flex-between">
@@ -43,7 +45,7 @@
 
         </div>
     </header>
-    <section class="s-features container flex-col flex-middle">
+    <section class="s-features container flex-col flex-middle" id="features">
         <div class="flex-row section-title flex-middle">
             <div class="decoration"></div>
             <h2>Key features</h2>
@@ -117,7 +119,7 @@
             </div>
         </div>
     </section>
-    <section class="s-team">
+    <section class="s-team" id="team">
         <div class="container flex-col flex-middle">
             <div class="flex-row section-title flex-middle">
                 <div class="decoration"></div>
@@ -186,7 +188,7 @@
             </div>
         </div>
     </section>
-    <section class="s-review">
+    <section class="s-review" id="testimonials">
         <div class="container flex-col flex-middle">
             <div class="flex-row section-title flex-middle">
                 <div class="decoration"></div>
@@ -198,7 +200,7 @@
                 <div class="customer-photo"></div>
                 <h3>Jon Doe</h3>
                 <p>Company Inc.</p>
-                <div class="quote row-flex">
+                <div class="quote flex-row">
                     <p>Vestibulum placerat nisl quis justo venenatis, et lacinia nunc venenatis. semper libero nec sapien condimentum dignissim. Nunc ante ligula, tempor in tellus in, gravida vestibulum justo. Nulla facilisi. Nullam tristique eros quis nibh tempus, vel viverra dolor pretium. Nam et vehicula leo. Vivamus hendrerit sit amet ante a tempus. Aenean gravida massa et ante pulvinar, id </p>
                 </div>
                 <div class="flex-row carousel">
@@ -210,7 +212,7 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer id="contact">
         <div class="container flex-col flex-middle">
             <div class="flex-row flex-middle section-title">
                 <div class="decoration"></div>

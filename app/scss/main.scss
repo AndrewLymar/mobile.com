@@ -120,6 +120,12 @@ nav {
     a {
         margin-right: auto;
     }
+    .mobile-menu-icon {
+        display: none;
+        width: 25px;
+        height: 25px;
+        
+    }
     .logo {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -152,6 +158,8 @@ nav {
 }
 
 .banner {
+    margin: 0 auto;
+    width: 90%;
     padding-left: 40px;
     padding-right: 80px;
 }
@@ -159,14 +167,16 @@ nav {
 .banner-text {
     padding-top: 170px;
     font-family: 'Open Sans', sans-serif;
-    color: #fff;
     line-height: 2.2em;
+    color: #fff;
     h2 {
         font-family: 'Raleway', sans-serif;
         font-size: 42px;
         font-weight: 700;
+        color: #fff;
     }
     h3 {
+        margin-top: 25px;
         font-weight: 600;
     }
     ul {
@@ -369,6 +379,7 @@ nav {
             color: #646464;
         }
         .quote {
+            max-width: 1200px;
             background: url(../img/quotes.png) no-repeat 12% 48%;
             P {
                 margin-top: 120px;
