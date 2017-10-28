@@ -1,4 +1,9 @@
     @media only screen and (max-width: 1200px) {
+        .banner-text {
+            h2 {
+                text-align: left;
+            }
+        }
         .features-img {
             display: none;
         }
@@ -26,9 +31,12 @@
             flex-direction: column;
             align-items: center;
             padding: 0;
-            .banner-img {}
             .banner-text {
                 padding-top: 50px;
+                h2,
+                h3 {
+                    text-align: center;
+                }
                 .btn-download {
                     margin: auto;
                 }
@@ -90,19 +98,21 @@
             .container {
                 nav {
                     justify-content: space-around;
-                    .mobile-menu-icon {
-                        display: flex;
-                        width: 50px;
-                        height: 50px;
-                    }
-                    ul {
-                        display: none;
-                        flex-direction: column;
-                        li {
-                            margin-bottom: 15px;
-                            a {
-                                font-size: 22px;
-                            }
+                }
+            }
+            nav {
+                .mobile-menu-icon {
+                    display: flex;
+                    width: 50px;
+                    height: 50px;
+                }
+                ul {
+                    display: none;
+                    flex-direction: column;
+                    li {
+                        margin-bottom: 15px;
+                        a {
+                            font-size: 22px;
                         }
                     }
                 }
