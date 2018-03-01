@@ -1,79 +1,82 @@
 $(function () {
-    var menuIsOpened = false;
-    var nav = $("nav");
-    $(document).on("scroll", onScroll);
-    $("a[href^='#']").on("click", scrollTo);
+	var menuIsOpened = false;
+	var nav = $("nav");
+	$(document).on("scroll", onScroll);
+	$("a[href^='#']").on("click", scrollTo);
 
-    $(window).on("resize", function () {
-        if (!menuIsOpened && $(document).width() > "480") {
-            showMenu();
-        } else if (menuIsOpened && $(document).width() < "480") {
-            hideMenu();
-        }
-    });
+	if ($(document).width() < "480") {
+		$("nav ul").css("display", "none");
+	}
 
-    $(".mobile-menu-icon").on("click", function () {
-        if (!menuIsOpened) {
-            showMenu();
-        } else {
-            hideMenu();
-        }
-    });
+	$(window).on("resize", function () {
+		if (!menuIsOpened && $(document).width() > "480") {
+			showMenu();
+		} else if (menuIsOpened && $(document).width() < "480") {
+			hideMenu();
+		}
+	});
 
-    $("nav ul li a").on("click", function () {
-        if ($(document).width() <= "480") {
-            hideMenu();
-        }
-    });
+	$(".mobile-menu-icon").on("click", function () {
+		if (!menuIsOpened) {
+			showMenu();
+		} else {
+			hideMenu();
+		}
+	});
 
-    function onScroll(event) {
-        var scrollPos = $(document).scrollTop();
+	$("nav ul li a").on("click", function () {
+		if ($(document).width() <= "480") {
+			hideMenu();
+		}
+	});
 
-        if (scrollPos > 0) {
-            nav.addClass("active");
-        } else {
-            nav.removeClass("active");
-        }
+	function onScroll(event) {
+		var scrollPos = $(document).scrollTop();
 
-        $("nav ul li a").each(function () {
-            var currLink = $(this);
-            var refElement = $(currLink.attr("href"));
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                $("nav ul li a").removeClass("active");
-                currLink.addClass("active");
-            } else {
-                currLink.removeClass("active");
-            }
-        });
-    }
+		if (scrollPos > 0) {
+			nav.addClass("active");
+		} else {
+			nav.removeClass("active");
+		}
 
-    function scrollTo(event) {
-        event.preventDefault();
-        $(document).off("scroll");
+		$("nav ul li a").each(function () {
+			var currLink = $(this);
+			var refElement = $(currLink.attr("href"));
+			if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+				$("nav ul li a").removeClass("active");
+				currLink.addClass("active");
+			} else {
+				currLink.removeClass("active");
+			}
+		});
+	}
 
-        $("a").each(function () {
-            $(this).removeClass("active");
-        })
-        $(this).addClass("active");
+	function scrollTo(event) {
+		event.preventDefault();
+		$(document).off("scroll");
 
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $("html, body").stop().animate({
-            'scrollTop': $target.offset().top + 2
-        }, 500, "swing", function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    }
+		$("a").each(function () {
+			$(this).removeClass("active");
+		})
+		$(this).addClass("active");
 
-    function showMenu() {
-        $("nav ul").css("display", "flex");
-        menuIsOpened = true;
-    }
+		var target = this.hash,
+			menu = target;
+		$target = $(target);
+		$("html, body").stop().animate({
+			'scrollTop': $target.offset().top - 92
+		}, 500, "swing", function () {
+			$(document).on("scroll", onScroll);
+		});
+	}
 
-    function hideMenu() {
-        $("nav ul").css("display", "none");
-        menuIsOpened = false;
-    }
+	function showMenu() {
+		$("nav ul").css("display", "flex");
+		menuIsOpened = true;
+	}
+
+	function hideMenu() {
+		$("nav ul").css("display", "none");
+		menuIsOpened = false;
+	}
 });
